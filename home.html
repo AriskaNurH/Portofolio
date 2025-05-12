@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portofolio - Ariska Nur Holipah</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html { font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; scroll-behavior: smooth; background: linear-gradient(135deg, #311644, #016e5c) ; color: #ddd; }
+
+    nav {
+    background: url('asset/bg.jpg') no-repeat center center/cover;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(20, 20, 20, 0.596);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    font-size: 20px;
+  }
+
+nav h2 {
+  color: #fff;
+  font-weight: 800;
+  margin: 0;
+}
+
+.nav-left {
+  flex: 1;
+  text-align: left;
+}
+
+.nav-right {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 800;
+}
+
+nav a:hover {
+  color: #e0e0e0;
+}
+
+    
+header {
+    height: 100vh;
+    background: url(asset/aku.jpeg) center center/cover no-repeat;
+    backdrop-filter: blur(20px);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    }
+
+  header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    }
+
+    .header-content {
+      z-index: 2;
+    }
+
+    .header-content h1 {
+      font-size: 60px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .header-content p {
+      font-size: 20px;
+      letter-spacing: 3px;
+    }
+
+    section {
+      margin: 2rem auto;
+      padding: 2rem;
+      max-width: 800px;
+      width: 90%;
+      background-color: #100236;
+      border-radius: 12px;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+    }
+
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e0e0e0;
+      text-align: center;
+    }
+
+    .section h2::after {
+    content: "";
+    display: block;
+    width: 60%;               
+    height: 1px;              
+    background-color: #e0e0e0; 
+    margin: 10px auto 20px;   
+    }
+
+    .section p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin: 0.5rem 0;
+      color: #bbb;
+      text-indent: 20px;
+      text-align: justify;
+    }
+
+    .highlight {
+      background-color: #004d40;
+      padding: 1rem;
+      border-radius: 5px;
+      margin: 0.5rem 0;
+    }
+
+.section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ddd;
+}
+
+.section ul {
+  list-style: none;
+  margin: 1rem 0;
+  padding-left: 20px;
+}
+
+.section li {
+  font-size: 1rem;
+  color: #bbb;
+  margin: 0.5rem 0;
+}
+
+.section li a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.section li a:hover {
+  text-decoration: underline;
+}
+
+.section ul li strong {
+  color: #e0e0e0;
+}
+
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-list li {
+  margin: 10px 0;
+  padding: 12px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(25, 26, 94, 0.671); /* Transparan */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.contact-list li:hover {
+  background-color: rgba(27, 27, 27, 0.8); /* Sedikit lebih gelap saat hover */
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+.contact-list li strong {
+  margin-right: 5px;
+}
+
+.contact-list a {
+  color: #00bcd4;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-list a:hover {
+  color: #ff5722;
+}
+
+.contact-list a:focus {
+  outline: none;
+  border-bottom: 2px solid #ff5722;
+}
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #212121;
+      color: #bbb;
+    }
+
+    /* Mobile responsiveness */
+    @media screen and (max-width: 768px) {
+      .header-content h1 {
+        font-size: 40px;
+      }
+
+      .header-content p {
+        font-size: 16px;
+      }
+
+      .section h2 {
+        font-size: 2rem;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+  <div class="nav-left">
+    <h2>Ariska Nur Holipah</h2>
+  </div>
+  <div class="nav-right">
+    <a href="#home">Home</a>
+    <a href="#about">Portofolio</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+
+  <header id="home">
+    <div class="header-content">
+        <p>Hello, I am</p>
+        <h1>Ariska Nur Holipah</h1>
+        <p>E2022 | STMIK MARDIRA INDONESIA | IFSI-S1</p>
+    </div>
+  </header>
+
+  <section id="about" class="section">
+    <h2>Portofolio</h2>
+    <p>Halo, Saya Ariska Nur Holipah!
+    <p>Sejujurnya, dunia fotografi selalu memikat hati saya. Menangkap momen lewat lensa kamera dan mengabadikannya
+       dalam sebuah karya visual adalah sesuatu yang saya nikmati. Namun, jalan hidup membawa saya ke dunia yang tak
+      kalah menarik: Informatika.</p>
+
+  <p>Saat ini, saya adalah mahasiswa aktif di STMIK Mardira Indonesia, jurusan Teknik Informatika (IFSI-S1). 
+    Meski awalnya terasa jauh dari minat utama saya, ternyata dunia pemrograman dan teknologi memiliki sisi kreatif
+    yang unik. Sama seperti fotografi, pengembangan web dan desain UI/UX membutuhkan ketelitian, kreativitas, dan 
+    detail — hal yang membuat saya tertarik untuk terus belajar.</p>
+
+  <p>Menggabungkan minat saya pada visual dan keterampilan teknis, saya mulai mengembangkan website dengan sentuhan 
+    desain yang estetik dan interaktif. Saya percaya bahwa setiap pengalaman, baik di dunia fotografi maupun teknologi, 
+    memperkaya cara pandang saya dalam berkarya.</p>
+
+  <p>Terima kasih sudah berkunjung ke portofolio saya!</p>
+  </section>
+
+  <section id="resume" class="section">
+  <h2>Resume</h2>
+
+    <h3>Pendidikan</h3>
+    <ul>
+      <li><strong>Gelar:</strong> S1 Teknik Informatika</li>
+      <li><strong>Universitas:</strong> STMIK MARDIRA INDONESIA</li>
+      <li><strong>Tahun Masuk:</strong> 2022</li>
+      <li><strong>Tahun Lulus:</strong> 2026 (perkiraan)</li>
+    </ul>
+
+    <h3>Proyek</h3>
+    <ul>
+      <li>
+        <strong>Website Portofolio Pribadi:</strong>
+        <br> Membuat dan mendesain website portofolio pribadi untuk menampilkan karya dan keterampilan menggunakan HTML, CSS, dan JavaScript. 
+        <br><a href="https://github.com/ariskanurh/portofolio-22110012" target="_blank">Lihat Proyek di GitHub</a>
+      </li>
+      <li>
+        <strong>Website Pribadi - Kecerdasan Buatan:</strong>
+        <br> Membuat dan mendesain website pribadi untuk pengumpulan tugas mata kuliah Kecerdasan Buatan menggunakan HTML, CSS, dan JavaScript.
+        <br><a href="https://github.com/ariskanurh/AriskaNur" target="_blank">Lihat Proyek di GitHub</a>
+      </li>
+    </ul>
+
+    <h3>Keahlian dan Teknologi</h3>
+    <ul>
+      <li><strong>Bahasa Pemrograman:</strong> HTML, CSS, JavaScript</li>
+      <li><strong>Framework:</strong> React, Bootstrap, Tailwind CSS</li>
+      <li><strong>Desain:</strong> Figma, Canva</li>
+      <li><strong>Database:</strong> MySQL, PHPMyAdmin</li>
+    </ul>
+
+    <h3>Hobi & Minat</h3>
+    <ul>
+      <li><strong>Hobi:</strong> Fotografi, Desain UI/UX</li>
+      <li><strong>Minat:</strong> Teknologi Web, Desain Visual, Pengembangan Produk Digital</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2> Contact</h2>
+  <ul class="contact-list">
+    <li><strong>📧 Email:</strong> 
+      <a href="mailto:ariskanurholipah@gmail.com" target="_blank">
+        ariskanurholipah@gmail.com
+      </a>
+    </li>
+    <li><strong>🌐 GitHub:</strong> 
+      <a href="https://github.com/ariskanurh" target="_blank">
+        github.com/ariskanurh
+      </a>
+    </li>
+    <li><strong>📸 Instagram:</strong> 
+      <a href="https://instagram.com/lk_vwxyzzz" target="_blank">
+        @lk_vwxyzzz
+      </a>
+    </li>
+    <li><strong>📱 WhatsApp:</strong> 
+      <a href="https://wa.me/6281572521748" target="_blank">
+        +62 815-7252-1748
+      </a>
+    </li>
+  </ul>
+</section>
+
+
+  <footer>
+    &copy; 2025 Ariska Nur Holipah. All rights reserved.
+  </footer>
+
+</body>
+</html>
